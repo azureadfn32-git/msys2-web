@@ -61,7 +61,7 @@ REPOSITORIES = [
 ]
 
 ARCH_REPO_URL = "https://frankfurt.mirror.pkgbuild.com"
-ARCH_REPO_CONFIG = []
+ARCH_REPO_CONFIG: list[tuple[str, str]] = []
 for repo in ["core", "core-testing", "extra", "extra-testing"]:
     ARCH_REPO_CONFIG.append((ARCH_REPO_URL + f"/{repo}/os/x86_64/{repo}.db", repo))
 AUR_METADATA_URL = "https://aur.archlinux.org/packages-meta-ext-v1.json.gz"
